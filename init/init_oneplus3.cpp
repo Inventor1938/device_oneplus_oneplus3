@@ -90,19 +90,23 @@ void init_alarm_boot_properties()
 
 void vendor_load_properties() {
     char device[PROP_VALUE_MAX];
-    char prj_name[PROP_VALUE_MAX];
+    char rf_version[PROP_VALUE_MAX];
     int rc;
 
     rc = property_get("ro.product.device", device, NULL);
     if (!rc || strncmp(device, "OnePlus3", PROP_VALUE_MAX))
         return;
 
-    property_get("ro.boot.project_name", prj_name, NULL);
+    property_get("ro.boot.rf_version", rf_version, NULL);
 
-    if (!strcmp(prj_name, "15811"))
-        property_set("ro.product.model", "OnePlus3T");
-    else
-        property_set("ro.product.model", "OnePlus3");
+    if (strstr(rf_version, "11") || strstr(rf_version, "12")
+            || strstr(rf_version, "31") || strstr(rf_version, "32")) {
+        /* Chinese/America */
+        property_set("ro.product.model", "ONEPLUS A3000");
+    } else if (strstr(rf_version, "21") || strstr(rf_version, "22")) {
+        /* Asia/Europe */
+        property_set("ro.product.model", "ONEPLUS A3003");
+    }
 
     init_alarm_boot_properties();
 }
