@@ -99,11 +99,10 @@ void vendor_load_properties() {
 
     property_get("ro.boot.rf_version", rf_version, NULL);
 
-    if (strstr(rf_version, "11") || strstr(rf_version, "12")
-            || strstr(rf_version, "31") || strstr(rf_version, "32")) {
-        /* Chinese/America */
+    if (strstr(rf_version, "11") || strstr(rf_version, "31")) {
+        /* Chinese/America*/
         property_set("ro.product.model", "ONEPLUS A3000");
-    } else if (strstr(rf_version, "21") || strstr(rf_version, "22")) {
+    } else if (strstr(rf_version, "21")) {
         /* Asia/Europe */
         property_set("ro.product.model", "ONEPLUS A3003");
     }
