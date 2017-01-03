@@ -94,6 +94,12 @@ void load_op3(const char *model) {
     property_set("ro.product.device", "OnePlus3");
     property_set("ro.build.description", "OnePlus3-user 6.0.1 MMB29M 24 dev-keys");
     property_set("ro.build.fingerprint", "OnePlus/OnePlus3/OnePlus3:6.0.1/MMB29M/362280:user/release-keys");
+    property_set("ro.device.chipset", "Qualcomm MSM8996 Snapdragon 820");
+    property_set("ro.device.cpu", "Quad-core (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)");
+    property_set("ro.device.gpu", "Adreno 530");
+    property_set("ro.device.rear_cam", "16 MP");
+    property_set("ro.device.front_cam", "8 MP");
+    property_set("ro.device.screen_res", "1080 x 1920");
 }
 
 void load_op3t(const char *model) {
@@ -102,6 +108,12 @@ void load_op3t(const char *model) {
     property_set("ro.product.device", "OnePlus3T");
     property_set("ro.build.description", "OnePlus3-user 6.0.1 MXB48T 100 dev-keys");
     property_set("ro.build.fingerprint", "OnePlus/OnePlus3/OnePlus3T:6.0.1/MXB48T/213712:user/release-keys");
+    property_set("ro.device.chipset", "Qualcomm MSM8996 Snapdragon 821");
+    property_set("ro.device.cpu", "Quad-core (2x2.35 GHz Kryo & 2x1.6 GHz Kryo)");
+    property_set("ro.device.gpu", "Adreno 530");
+    property_set("ro.device.rear_cam", "16 MP");
+    property_set("ro.device.front_cam", "16 MP");
+    property_set("ro.device.screen_res", "1080 x 1920");
 }
 
 void vendor_load_properties() {
