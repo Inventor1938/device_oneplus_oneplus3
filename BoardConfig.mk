@@ -32,6 +32,8 @@ TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
 BOARD_VENDOR := oneplus
 
+TARGET_USE_CM_RAMDISK := true
+
 # Use Snapdragon LLVM, if available
 SDCLANG := true
 
