@@ -34,8 +34,8 @@ TARGET_VENDOR := oneplus
 
 # Citrus-CAF Kenzo Maintainer
  PRODUCT_BUILD_PROP_OVERRIDES += \
- DEVICE_MAINTAINERS="Aditya Garg (phenomx1998)"
+ DEVICE_MAINTAINERS="Ivan Kolev (Inventor1938)"
 
 # Branch
  PRODUCT_PROPERTY_OVERRIDES += \
- ro.caf.branch=LA.UM.5.5.r1-04600-8x96.0
+ ro.caf.branch=LA.UM.5.5.r1-05100-8x96.0
